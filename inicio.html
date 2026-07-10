@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Banco Demo</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+}
+
+.header{
+    background:#d6001c;
+    color:#fff;
+    padding:18px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:30px;
+}
+
+.logo span{
+    font-size:28px;
+    font-weight:bold;
+}
+
+.menu{
+    font-size:28px;
+    cursor:pointer;
+}
+
+.container{
+    max-width:420px;
+    margin:35px auto;
+    background:#fff;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+h1{
+    color:#b30018;
+    font-weight:300;
+    margin-bottom:30px;
+}
+
+input{
+    width:100%;
+    height:58px;
+    margin-bottom:22px;
+    padding:15px;
+    font-size:18px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    outline:none;
+}
+
+input:focus{
+    border-color:#d6001c;
+}
+
+button{
+    width:100%;
+    height:58px;
+    border:none;
+    border-radius:30px;
+    background:#d6001c;
+    color:#fff;
+    font-size:20px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#b50018;
+}
+
+.link{
+    margin-top:30px;
+    text-align:center;
+}
+
+.link a{
+    text-decoration:none;
+    color:#008b8b;
+    font-size:18px;
+}
+
+.info{
+    margin-top:30px;
+    background:#eef8fa;
+    padding:18px;
+    border-radius:10px;
+    color:#555;
+    font-size:15px;
+    line-height:25px;
+}
+
+.footer{
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    background:#d6001c;
+    padding:18px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color:#fff;
+}
+
+.footer button{
+    width:180px;
+    height:50px;
+    border:2px solid #fff;
+    background:transparent;
+}
+</style>
+
+</head>
+<body>
+
+<div class="header">
+    <div class="logo">🏦 <span>Banco Demo</span></div>
+    <div class="menu">☰</div>
+</div>
+
+<div class="container">
+
+<h1>Ingresa a tu banca en línea</h1>
+
+<input type="text" placeholder="Documento de identidad">
+
+<input type="password" placeholder="Contraseña">
+
+<button>Ingresar</button>
+
+<div class="link">
+<a href="#">¿Olvidaste tu contraseña?</a>
+</div>
+
+<div class="info">
+<strong>Información</strong><br><br>
+
+Esta es una interfaz de demostración creada para fines de aprendizaje en HTML y CSS. No envía ni almacena información.
+</div>
+
+</div>
+
+<div class="footer">
+
+<div>
+¿Aún no tienes cuenta?
+</div>
+
+<button>Abrir cuenta</button>
+
+</div>
+
+</body>
+</html>
