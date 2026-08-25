@@ -6,6 +6,7 @@
 <title>Online Banking Empresas - DEMO</title>
 
 <style>
+
 *{
     box-sizing:border-box;
     margin:0;
@@ -33,6 +34,7 @@ body{
 }
 
 /* CONTENEDOR PRINCIPAL */
+
 .page{
     min-height:100vh;
     display:flex;
@@ -40,6 +42,7 @@ body{
 }
 
 /* PARTE SUPERIOR */
+
 .main{
     display:grid;
     grid-template-columns:68% 32%;
@@ -47,6 +50,7 @@ body{
 }
 
 /* LADO IZQUIERDO */
+
 .left{
     padding:35px 42px;
     background:#e9ecef;
@@ -79,6 +83,7 @@ body{
 }
 
 /* SEGURIDAD */
+
 .security{
     margin-top:40px;
     max-width:800px;
@@ -136,6 +141,7 @@ body{
 }
 
 /* ESCUDO */
+
 .shield{
     position:absolute;
     right:10%;
@@ -176,6 +182,7 @@ body{
 }
 
 /* LOGIN */
+
 .login{
     background:#fff;
     padding:25px 45px;
@@ -276,6 +283,7 @@ input:focus{
 }
 
 /* FOOTER */
+
 .footer{
     background:#202020;
     color:white;
@@ -294,7 +302,8 @@ input:focus{
     max-width:1050px;
 }
 
-/* RESPONSIVE */
+/* TABLET */
+
 @media(max-width:1000px){
 
     .main{
@@ -302,13 +311,13 @@ input:focus{
     }
 
     .left{
-        min-height:600px;
+        min-height:650px;
     }
 
     .shield{
         right:8%;
         top:250px;
-        transform:scale(.75);
+        transform:scale(.75) rotate(3deg);
     }
 
     .login{
@@ -316,17 +325,24 @@ input:focus{
         border-top:1px solid #ddd;
         padding:30px 25px;
     }
+
 }
+
+/* MOVIL */
 
 @media(max-width:600px){
 
     .left{
         padding:25px 20px;
-        min-height:520px;
+        min-height:650px;
     }
 
     .logo{
         font-size:23px;
+    }
+
+    .logo span{
+        font-size:10px;
     }
 
     .title{
@@ -353,8 +369,35 @@ input:focus{
         max-width:100%;
     }
 
+    /*
+       ESCUDO VISIBLE EN MOVIL
+    */
+
     .shield{
-        display:none;
+        display:block;
+        position:absolute;
+        right:50%;
+        top:390px;
+        width:200px;
+        height:230px;
+        transform:translateX(50%) scale(.55) rotate(3deg);
+    }
+
+    .lock{
+        top:70px;
+        width:80px;
+        height:68px;
+    }
+
+    .lock:before{
+        width:45px;
+        height:50px;
+        top:-55px;
+    }
+
+    .security-btn{
+        font-size:13px;
+        padding:10px 18px;
     }
 
     .login{
@@ -363,6 +406,10 @@ input:focus{
 
     .tabs{
         margin-bottom:35px;
+    }
+
+    .tab{
+        font-size:12px;
     }
 
     .login-title{
@@ -374,22 +421,66 @@ input:focus{
         margin-bottom:30px;
     }
 
+    input{
+        height:50px;
+    }
+
+    .enter{
+        width:170px;
+    }
+
     .footer{
         padding:20px;
     }
+
+    .footer p{
+        font-size:12px;
+    }
+
 }
+
+/* MOVILES MUY PEQUEÑOS */
+
+@media(max-width:380px){
+
+    .left{
+        min-height:620px;
+    }
+
+    .title{
+        font-size:34px;
+    }
+
+    .security-title .red{
+        font-size:36px;
+    }
+
+    .security-title .black{
+        font-size:23px;
+    }
+
+    .shield{
+        top:375px;
+        transform:translateX(50%) scale(.48) rotate(3deg);
+    }
+
+}
+
 </style>
 </head>
 
 <body>
 
-<div class="demo">MAQUETA · DEMO</div>
+<div class="demo">
+    MAQUETA · DEMO
+</div>
 
 <div class="page">
 
     <div class="main">
 
-        <!-- IZQUIERDA -->
+        <!-- ================= LADO IZQUIERDO ================= -->
+
         <section class="left">
 
             <div class="logo">
@@ -402,47 +493,81 @@ input:focus{
                 <strong>Empresas</strong>
             </div>
 
+
+            <!-- SEGURIDAD -->
+
             <div class="security">
 
                 <div class="security-title">
-                    <span class="red">Prevení</span>
-                    <span class="black">estafas</span>
+
+                    <span class="red">
+                        Prevení
+                    </span>
+
+                    <span class="black">
+                        estafas
+                    </span>
+
                 </div>
 
+
                 <div class="warning">
-                    <div class="icon">🔒</div>
+
+                    <div class="icon">
+                        🔒
+                    </div>
+
                     <p>
                         <b>No ingreses información de seguridad</b>
                         si te la solicitan en un momento inesperado
                         o en una pantalla que no reconocés.
                     </p>
+
                 </div>
 
+
                 <div class="warning">
-                    <div class="icon">****</div>
+
+                    <div class="icon">
+                        ****
+                    </div>
+
                     <p>
                         <b>Nunca compartas tus claves o códigos</b>
                         para validar datos ni actualizar sistemas.
                     </p>
+
                 </div>
 
-                <button class="security-btn">
+
+                <button
+                    class="security-btn"
+                    type="button">
+
                     Consultar consejos de seguridad
+
                 </button>
 
             </div>
 
+
+            <!-- ESCUDO -->
+
             <div class="shield">
+
                 <div class="lock"></div>
+
             </div>
 
         </section>
 
 
-        <!-- LOGIN -->
+        <!-- ================= LOGIN ================= -->
+
         <section class="login">
 
             <div class="tabs">
+
                 <div class="tab active">
                     Ingresar con usuario y contraseña
                 </div>
@@ -450,7 +575,9 @@ input:focus{
                 <div class="tab">
                     Ingresar con Certificado digital
                 </div>
+
             </div>
+
 
             <div class="login-box">
 
@@ -462,40 +589,58 @@ input:focus{
                     Escribí tu usuario y contraseña y empezá a operar
                 </p>
 
-                <!-- FORMULARIO SOLO VISUAL -->
+
+                <!-- FORMULARIO DEMO -->
+
                 <form onsubmit="return false;">
 
-                    <label for="usuario">Usuario</label>
+                    <label for="usuario">
+                        Usuario
+                    </label>
+
                     <input
                         id="usuario"
                         type="text"
                         autocomplete="off"
-                        placeholder=""
                     >
 
-                    <label for="password">Contraseña</label>
+
+                    <label for="password">
+                        Contraseña
+                    </label>
+
                     <input
                         id="password"
                         type="password"
                         autocomplete="off"
-                        placeholder=""
                     >
 
+
                     <div class="remember">
-                        <input type="checkbox" id="recordar">
+
+                        <input
+                            type="checkbox"
+                            id="recordar"
+                        >
+
                         <label for="recordar">
                             Recordar usuario
                         </label>
+
                     </div>
+
 
                     <button
                         type="button"
                         class="enter"
                         onclick="demoLogin()">
+
                         Ingresar
+
                     </button>
 
                 </form>
+
 
                 <div class="help">
                     ¿Necesitás ayuda para ingresar?
@@ -508,15 +653,19 @@ input:focus{
     </div>
 
 
-    <!-- FOOTER -->
+    <!-- ================= FOOTER ================= -->
+
     <footer class="footer">
 
-        <h3>¿Tenés alguna consulta?</h3>
+        <h3>
+            ¿Tenés alguna consulta?
+        </h3>
 
         <p>
-            Esta es una maqueta educativa. Para una implementación real,
-            utilizá únicamente los canales oficiales de tu entidad bancaria.
-            No ingreses datos reales en esta demostración.
+            Esta es una maqueta educativa. Para una implementación
+            real, utilizá únicamente los canales oficiales de tu
+            entidad bancaria. No ingreses datos reales en esta
+            demostración.
         </p>
 
     </footer>
@@ -525,14 +674,17 @@ input:focus{
 
 
 <script>
+
 function demoLogin(){
 
     alert(
         "MAQUETA DEMO\n\n" +
-        "Este botón es únicamente visual y no envía ni almacena información."
+        "Este botón es únicamente visual " +
+        "y no envía ni almacena información."
     );
 
 }
+
 </script>
 
 </body>
