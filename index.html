@@ -8,9 +8,9 @@
 
 <style>
 
-/* =========================
+/* =====================================================
    RESET
-========================= */
+===================================================== */
 
 *{
     box-sizing:border-box;
@@ -25,15 +25,16 @@ body{
 }
 
 
-/* =========================
-   DEMO
-========================= */
+/* =====================================================
+   ETIQUETA DEMO
+===================================================== */
 
 .demo{
     position:fixed;
     top:8px;
     left:50%;
     transform:translateX(-50%);
+
     z-index:1000;
 
     background:#222;
@@ -48,9 +49,9 @@ body{
 }
 
 
-/* =========================
+/* =====================================================
    CONTENEDOR
-========================= */
+===================================================== */
 
 .page{
     min-height:100vh;
@@ -59,9 +60,9 @@ body{
 }
 
 
-/* =========================
-   PARTE PRINCIPAL
-========================= */
+/* =====================================================
+   PARTE PRINCIPAL PC
+===================================================== */
 
 .main{
     display:grid;
@@ -71,9 +72,9 @@ body{
 }
 
 
-/* =========================
-   PANEL IZQUIERDO PC
-========================= */
+/* =====================================================
+   PANEL IZQUIERDO
+===================================================== */
 
 .left{
     position:relative;
@@ -84,10 +85,13 @@ body{
 }
 
 
-/* LOGO */
+/* =====================================================
+   LOGO IZQUIERDO
+===================================================== */
 
 .logo{
     font-size:28px;
+
     font-weight:bold;
 
     color:#e30613;
@@ -106,7 +110,9 @@ body{
 }
 
 
-/* TITULO */
+/* =====================================================
+   TITULO
+===================================================== */
 
 .title{
     font-size:58px;
@@ -123,9 +129,9 @@ body{
 }
 
 
-/* =========================
+/* =====================================================
    SEGURIDAD
-========================= */
+===================================================== */
 
 .security{
     margin-top:40px;
@@ -163,7 +169,9 @@ body{
 }
 
 
-/* MENSAJES */
+/* =====================================================
+   MENSAJES
+===================================================== */
 
 .warning{
     display:flex;
@@ -195,7 +203,9 @@ body{
 }
 
 
-/* BOTON */
+/* =====================================================
+   BOTON SEGURIDAD
+===================================================== */
 
 .security-btn{
     margin-top:18px;
@@ -213,12 +223,14 @@ body{
     font-weight:bold;
 
     font-size:14px;
+
+    cursor:pointer;
 }
 
 
-/* =========================
-   ESCUDO / IMAGEN PC
-========================= */
+/* =====================================================
+   ESCUDO PC
+===================================================== */
 
 .shield{
     position:absolute;
@@ -234,24 +246,30 @@ body{
     border:10px solid #222;
 
     border-top-left-radius:100px;
+
     border-top-right-radius:100px;
 
     border-bottom-left-radius:150px;
+
     border-bottom-right-radius:150px;
 
     transform:rotate(3deg);
 }
 
 
+/* CANDADO */
+
 .lock{
     position:absolute;
 
     left:50%;
+
     top:95px;
 
     transform:translateX(-50%);
 
     width:100px;
+
     height:85px;
 
     background:#ed0000;
@@ -268,6 +286,7 @@ body{
     position:absolute;
 
     width:55px;
+
     height:60px;
 
     border:10px solid #ed0000;
@@ -277,15 +296,16 @@ body{
     border-radius:35px 35px 0 0;
 
     left:50%;
+
     top:-65px;
 
     transform:translateX(-50%);
 }
 
 
-/* =========================
-   LOGIN
-========================= */
+/* =====================================================
+   LOGIN PC
+===================================================== */
 
 .login{
     background:#fff;
@@ -295,6 +315,8 @@ body{
     border-left:1px solid #ddd;
 }
 
+
+/* TABS */
 
 .tabs{
     display:grid;
@@ -327,7 +349,9 @@ body{
 }
 
 
-/* LOGIN BOX */
+/* =====================================================
+   LOGIN BOX
+===================================================== */
 
 .login-box{
     max-width:430px;
@@ -336,12 +360,16 @@ body{
 }
 
 
+/* TITULO LOGIN */
+
 .login-title{
     font-size:26px;
 
     margin-bottom:18px;
 }
 
+
+/* SUBTITULO */
 
 .login-subtitle{
     font-size:17px;
@@ -361,7 +389,9 @@ label{
 }
 
 
-/* INPUT */
+/* =====================================================
+   INPUT
+===================================================== */
 
 input{
     width:100%;
@@ -387,7 +417,9 @@ input:focus{
 }
 
 
-/* RECORDAR */
+/* =====================================================
+   RECORDAR
+===================================================== */
 
 .remember{
     display:flex;
@@ -404,7 +436,10 @@ input:focus{
 
 .remember input{
     width:20px;
+
     height:20px;
+
+    min-width:20px;
 
     margin:0;
 }
@@ -415,12 +450,15 @@ input:focus{
 }
 
 
-/* INGRESAR */
+/* =====================================================
+   BOTON INGRESAR
+===================================================== */
 
 .enter{
     display:block;
 
     width:180px;
+
     height:44px;
 
     margin:auto;
@@ -441,7 +479,9 @@ input:focus{
 }
 
 
-/* AYUDA */
+/* =====================================================
+   AYUDA
+===================================================== */
 
 .help{
     border-top:1px solid #ddd;
@@ -458,9 +498,9 @@ input:focus{
 }
 
 
-/* =========================
+/* =====================================================
    FOOTER PC
-========================= */
+===================================================== */
 
 .footer{
     background:#202020;
@@ -489,9 +529,9 @@ input:focus{
 }
 
 
-/* ==================================================
+/* =====================================================
    TABLET
-================================================== */
+===================================================== */
 
 @media(max-width:1000px){
 
@@ -522,9 +562,9 @@ input:focus{
 }
 
 
-/* ==================================================
+/* =====================================================
    MOVIL
-================================================== */
+===================================================== */
 
 @media(max-width:600px){
 
@@ -533,21 +573,27 @@ input:focus{
     }
 
 
-    /* OCULTAR PANEL DE SEGURIDAD */
+    /* ---------------------------------------------
+       OCULTAR PANEL IZQUIERDO
+    --------------------------------------------- */
 
     .left{
         display:none;
     }
 
 
-    /* OCULTAR FOOTER */
+    /* ---------------------------------------------
+       OCULTAR FOOTER
+    --------------------------------------------- */
 
     .footer{
         display:none;
     }
 
 
-    /* LOGIN COMPLETO */
+    /* ---------------------------------------------
+       LOGIN
+    --------------------------------------------- */
 
     .main{
         display:block;
@@ -561,7 +607,7 @@ input:focus{
 
         min-height:100vh;
 
-        padding:48px 38px 35px;
+        padding:30px 22px 25px;
 
         border:0;
 
@@ -569,7 +615,9 @@ input:focus{
     }
 
 
-    /* OCULTAR TABS */
+    /* ---------------------------------------------
+       OCULTAR TABS
+    --------------------------------------------- */
 
     .tabs{
         display:none;
@@ -585,7 +633,9 @@ input:focus{
     }
 
 
-    /* LOGO MOVIL */
+    /* ---------------------------------------------
+       LOGO MOVIL
+    --------------------------------------------- */
 
     .login-box::before{
 
@@ -595,99 +645,109 @@ input:focus{
 
         text-align:center;
 
-        font-size:28px;
+        font-size:21px;
 
         font-weight:500;
 
         color:#222;
 
-        margin-bottom:62px;
+        margin-bottom:42px;
     }
 
 
-    /* TITULO */
+    /* ---------------------------------------------
+       TITULO
+    --------------------------------------------- */
 
     .login-title{
 
         text-align:center;
 
-        font-size:29px;
+        font-size:22px;
 
         line-height:1.2;
 
         font-weight:400;
 
-        margin-bottom:25px;
+        margin-bottom:16px;
     }
 
 
-    /* SUBTITULO */
+    /* ---------------------------------------------
+       SUBTITULO
+    --------------------------------------------- */
 
     .login-subtitle{
 
         text-align:center;
 
-        font-size:22px;
+        font-size:16px;
 
         line-height:1.35;
 
-        margin:0 auto 68px;
+        margin:0 auto 42px;
 
-        max-width:700px;
+        max-width:500px;
     }
 
 
-    /* LABEL */
+    /* ---------------------------------------------
+       LABELS
+    --------------------------------------------- */
 
     label{
 
-        font-size:21px;
+        font-size:16px;
 
-        margin-bottom:10px;
+        margin-bottom:7px;
     }
 
 
-    /* INPUTS */
+    /* ---------------------------------------------
+       INPUTS
+    --------------------------------------------- */
 
     input{
 
         width:100%;
 
-        height:108px;
+        height:52px;
 
-        border:1.5px solid #999;
+        border:1px solid #999;
 
-        border-radius:13px;
+        border-radius:8px;
 
-        font-size:20px;
+        font-size:16px;
 
-        padding:0 18px;
+        padding:0 12px;
 
-        margin-bottom:37px;
+        margin-bottom:25px;
     }
 
 
-    /* RECORDAR */
+    /* ---------------------------------------------
+       RECORDAR USUARIO
+    --------------------------------------------- */
 
     .remember{
 
-        margin:8px 0 75px;
+        margin:2px 0 40px;
 
         display:flex;
 
         align-items:center;
 
-        gap:18px;
+        gap:10px;
     }
 
 
     .remember input{
 
-        width:40px;
+        width:20px;
 
-        height:40px;
+        height:20px;
 
-        min-width:40px;
+        min-width:20px;
 
         margin:0;
     }
@@ -695,35 +755,39 @@ input:focus{
 
     .remember label{
 
-        font-size:21px;
+        font-size:16px;
 
         margin:0;
     }
 
 
-    /* BOTON */
+    /* ---------------------------------------------
+       BOTON
+    --------------------------------------------- */
 
     .enter{
 
         width:100%;
 
-        height:86px;
+        height:52px;
 
-        border-radius:45px;
+        border-radius:28px;
 
-        font-size:28px;
+        font-size:17px;
     }
 
 
-    /* AYUDA */
+    /* ---------------------------------------------
+       AYUDA
+    --------------------------------------------- */
 
     .help{
 
-        margin-top:90px;
+        margin-top:50px;
 
-        padding-top:62px;
+        padding-top:35px;
 
-        font-size:21px;
+        font-size:16px;
 
         color:#087b80;
 
@@ -733,91 +797,91 @@ input:focus{
 }
 
 
-/* ==================================================
-   MOVILES PEQUEÑOS
-================================================== */
+/* =====================================================
+   MOVIL PEQUEÑO
+===================================================== */
 
 @media(max-width:380px){
 
     .login{
 
-        padding:42px 28px 30px;
+        padding:25px 18px 20px;
     }
 
 
     .login-box::before{
 
-        font-size:24px;
+        font-size:19px;
 
-        margin-bottom:52px;
+        margin-bottom:35px;
     }
 
 
     .login-title{
 
-        font-size:25px;
+        font-size:20px;
     }
 
 
     .login-subtitle{
 
-        font-size:19px;
+        font-size:15px;
 
-        margin-bottom:55px;
+        margin-bottom:35px;
     }
 
 
     label{
 
-        font-size:19px;
+        font-size:15px;
     }
 
 
     input{
 
-        height:85px;
+        height:48px;
 
-        margin-bottom:30px;
+        margin-bottom:22px;
     }
 
 
     .remember{
 
-        margin-bottom:60px;
+        margin-bottom:35px;
     }
 
 
     .remember input{
 
-        width:34px;
+        width:19px;
 
-        height:34px;
+        height:19px;
 
-        min-width:34px;
+        min-width:19px;
     }
 
 
     .remember label{
 
-        font-size:19px;
+        font-size:15px;
     }
 
 
     .enter{
 
-        height:70px;
+        height:49px;
 
-        font-size:24px;
+        font-size:16px;
     }
 
 
     .help{
 
-        margin-top:70px;
+        margin-top:45px;
 
-        padding-top:50px;
+        padding-top:30px;
 
-        font-size:18px;
+        font-size:15px;
     }
 
 }
@@ -829,7 +893,9 @@ input:focus{
 <body>
 
 
-<!-- DEMO -->
+<!-- =====================================================
+     DEMO
+===================================================== -->
 
 <div class="demo">
     MAQUETA · DEMO
@@ -839,16 +905,16 @@ input:focus{
 <div class="page">
 
 
-    <!-- =========================================
+    <!-- =================================================
          PARTE PRINCIPAL
-    ========================================== -->
+    ================================================== -->
 
     <div class="main">
 
 
-        <!-- =====================================
-             IZQUIERDA - SOLO PC
-        ====================================== -->
+        <!-- =============================================
+             PANEL IZQUIERDO - PC
+        ============================================== -->
 
         <section class="left">
 
@@ -944,7 +1010,7 @@ input:focus{
             </div>
 
 
-            <!-- ESCUDO SOLO PC -->
+            <!-- ESCUDO -->
 
             <div class="shield">
 
@@ -957,16 +1023,17 @@ input:focus{
 
 
 
-        <!-- =====================================
+        <!-- =============================================
              LOGIN
-        ====================================== -->
+        ============================================== -->
 
         <section class="login">
 
 
-            <!-- TABS SOLO PC -->
+            <!-- TABS PC -->
 
             <div class="tabs">
+
 
                 <div class="tab active">
 
@@ -981,9 +1048,12 @@ input:focus{
 
                 </div>
 
+
             </div>
 
 
+
+            <!-- LOGIN BOX -->
 
             <div class="login-box">
 
@@ -1003,7 +1073,7 @@ input:focus{
 
 
 
-                <!-- FORMULARIO DEMO -->
+                <!-- FORMULARIO SOLO DEMO -->
 
                 <form onsubmit="return false;">
 
@@ -1089,9 +1159,9 @@ input:focus{
 
 
 
-    <!-- =========================================
-         FOOTER SOLO PC
-    ========================================== -->
+    <!-- =================================================
+         FOOTER
+    ================================================== -->
 
     <footer class="footer">
 
@@ -1121,6 +1191,10 @@ input:focus{
 
 
 <script>
+
+/* =====================================================
+   BOTON DEMO
+===================================================== */
 
 function demoLogin(){
 
